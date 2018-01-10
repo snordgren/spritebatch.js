@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "A library for rendering 2D sprites with WebGL.",
   "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "keywords": [
     "webgl",
     "spritebatch"
