@@ -12,5 +12,6 @@ export {
 } from './sprite_batch';
 
 export {
-    createTexture
+    createTexture,
+    loadTexture
 } from './texture';
