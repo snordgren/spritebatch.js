@@ -10,5 +10,5 @@ colors.
 
 ## Install
 
-    npm install spritebatch
+    npm install spritebatch --save
     
