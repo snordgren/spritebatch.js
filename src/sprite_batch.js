@@ -1,9 +1,7 @@
-import { m4 } from 'twgl.js';
+import { createProgramFromSources, m4 } from 'twgl.js';
 
-import fragmentShaderSource from './sprite_batch.frag';
-import vertexShaderSource from './sprite_batch.vert';
-import { createShader } from './shader';
-import { createShaderProgram } from './shader_program';
+import fragmentShader from './sprite_batch.frag';
+import vertexShader from './sprite_batch.vert';
 
 const componentCount = 8;
 const maxSpriteCount = 1024;
@@ -145,10 +143,7 @@ class SpriteBatch {
 }
 
 function createSpriteBatch(gl, width, height) {
-  const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
-  const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-  const program = createShaderProgram(gl, vertexShader, fragmentShader);
-
+  const program = createProgramFromSources(gl, [vertexShader, fragmentShader]);
   const uniforms = {
     projView: gl.getUniformLocation(program, 'u_projView'),
     texture: gl.getUniformLocation(program, 'u_texture'),
