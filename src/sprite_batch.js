@@ -1,4 +1,4 @@
-import { mat4 } from 'gl-matrix';
+import { m4 } from 'twgl.js';
 
 import fragmentShaderSource from './sprite_batch.frag';
 import vertexShaderSource from './sprite_batch.vert';
@@ -136,7 +136,7 @@ class SpriteBatch {
   }
 
   resize(width, height) {
-    this.projView = mat4.ortho(this.projView, 0, width, height, 0, 0, 1);
+    this.projView = m4.ortho(0, width, height, 0, 0, 1);
   }
 
   setColor(rgba) {
@@ -164,7 +164,7 @@ function createSpriteBatch(gl, width, height) {
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
   gl.bufferData(gl.ARRAY_BUFFER, maxSpriteCount * componentCount, gl.STREAM_DRAW);
 
-  const projView = mat4.ortho(mat4.create(), 0, width, height, 0, 0, 1);
+  const projView = m4.ortho(0, width, height, 0, 0, 1);
 
   return new SpriteBatch(gl, program, uniforms, attributes, buffer, projView);
 }

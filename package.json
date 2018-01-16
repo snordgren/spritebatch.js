@@ -17,12 +17,13 @@
     "url": "https://github.com/snordgren/spritebatch.js.git"
   },
   "dependencies": {
-    "gl-matrix": "^2.4.0"
+    "twgl.js": "^4.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "create-game": "^1.0.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "raw-loader": "^0.5.1",
     "webpack": "^3.10.0"

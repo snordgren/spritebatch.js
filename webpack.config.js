@@ -30,7 +30,7 @@ module.exports = {
     }),
   ],
   externals: {
-    'gl-matrix': 'gl-matrix'
+    'twgl.js': 'twgl.js'
   }
 };
 
