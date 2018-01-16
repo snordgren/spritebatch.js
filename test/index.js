@@ -15,7 +15,6 @@ createGame({
   },
 
   render: (gl) => {
-    resizeCanvasToDisplaySize(canvas, window.devicePixelRatio);
     batch.resize(gl.drawingBufferWidth, gl.drawingBufferHeight);
     gl.clearColor(1, 0, 0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
