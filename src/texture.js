@@ -5,6 +5,7 @@ function isPowerOf2(value) {
 /**
  * Apply a set of options to a currently bound texture. This is an internal function for
  * use by createTexture and loadTexture.
+ * @deprecated use twgl.js instead
  */
 function applyTextureOpts(gl, options) {
   if (options.magFilter) {
@@ -26,6 +27,7 @@ function applyTextureOpts(gl, options) {
 
 /**
  * Create a new texture from an Uint8Array.
+ * @deprecated use twgl.js instead
  */
 function createTexture(gl, data, width, height, options) {
   const texture = gl.createTexture();
@@ -49,6 +51,7 @@ function createTexture(gl, data, width, height, options) {
 
 /**
  * Load a new texture from a URL.
+ * @deprecated use twgl.js instead
  */
 function loadTexture(gl, url, callback) {
   const image = new Image();
