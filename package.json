@@ -1,6 +1,6 @@
 {
   "name": "spritebatch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A library for rendering 2D sprites with WebGL.",
   "main": "dist/index.js",
   "scripts": {

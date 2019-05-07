@@ -1,4 +1,7 @@
 node_modules/
 src/
 test/
+.babelrc
+.eslintrc
 .DS_Store
+webpack.config.js
