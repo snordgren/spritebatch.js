@@ -91,7 +91,7 @@ class SpriteBatch {
       gl.vertexAttribPointer(this.attributes.texCoord, 2, gl.FLOAT, false, stride, 2 * 4);
       gl.vertexAttribPointer(this.attributes.color, 4, gl.FLOAT, false, stride, 4 * 4);
       gl.uniformMatrix4fv(this.uniforms.projView, false, this.projView);
-      gl.drawArrays(gl.TRIANGLES, 0, 6);
+      gl.drawArrays(gl.TRIANGLES, 0, 6 * this.spriteCounter);
 
       this.spriteCounter = 0;
     }
