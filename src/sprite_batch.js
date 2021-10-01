@@ -101,7 +101,7 @@ class SpriteBatch {
     if (!this.isRendering) {
       throw new Error('Call SpriteBatch.begin before beginning to render.');
     } else if (
-      this.sprites.length === maxSpriteCount
+      this.spriteCounter === maxSpriteCount
       && this.sprites.length > 0
     ) {
       this.flush();
