@@ -100,8 +100,10 @@ class SpriteBatch {
   drawRegion(texture, x, y, width, height, region) {
     if (!this.isRendering) {
       throw new Error('Call SpriteBatch.begin before beginning to render.');
-    } else if ((this.currentTexture !== texture || this.sprites.length === maxSpriteCount)
-      && this.sprites.length > 0) {
+    } else if (
+      this.sprites.length === maxSpriteCount
+      && this.sprites.length > 0
+    ) {
       this.flush();
     }
 
