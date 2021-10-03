@@ -1,11 +1,10 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
   entry: ['./src/index.js'],
   output: {
-    filename: 'dist/index.js',
-    libraryTarget: 'umd'
+    filename: 'index.js',
+    library: 'spritebatch',
   },
+  mode: 'production',
   devtool: 'source-map',
   module: {
     rules: [
@@ -14,7 +13,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['env'],
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ],
         },
       },
       {
@@ -22,15 +23,5 @@ module.exports = {
         use: 'raw-loader',
       },
     ],
-  },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: 'bundle.css',
-      allChunks: true,
-    }),
-  ],
-  externals: {
-    'twgl.js': 'twgl.js'
   }
 };
-

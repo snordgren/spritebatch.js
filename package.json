@@ -1,9 +1,10 @@
 {
   "name": "spritebatch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A library for rendering 2D sprites with WebGL.",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "build": "rm -rf ./dist && webpack",
     "prepublishOnly": "npm install && ./node_modules/.bin/webpack"
   },
   "keywords": [
@@ -17,15 +18,14 @@
     "url": "https://github.com/snordgren/spritebatch.js.git"
   },
   "dependencies": {
-    "twgl.js": "^4.4.0"
+    "twgl.js": "^4.21.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.7.0",
-    "create-game": "^1.0.5",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "raw-loader": "^0.5.1",
-    "webpack": "^3.10.0"
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "raw-loader": "^4.0.2",
+    "webpack": "^5.56.0",
+    "webpack-cli": "^4.8.0"
   }
 }
